@@ -22,22 +22,22 @@ Create `Sprite`s and `Animation` objects using the `.Sprite` and `.Animation` me
 from pystoryboard.enums import Layer, Origin, LoopType
 
 my_sprite = sb.Sprite(
-	Layer.Background,
-	Origin.TopLeft,
-	"sprite.png",
-	x=200,
-	y=300,
+    Layer.Background,
+    Origin.TopLeft,
+    "sprite.png",
+    x=200,
+    y=300,
 )
 
 my_animation = sb.Animation(
-	Layer.Background,
-	Origin.Centre,
-	"animation.png",
-	x=100,
-	y=100,
-	frame_count=10,
-	frame_time=33,
-	loop=LoopType.Forever,
+    Layer.Background,
+    Origin.Centre,
+    "animation.png",
+    x=100,
+    y=100,
+    frame_count=10,
+    frame_time=33,
+    loop=LoopType.Forever,
 )
 ```
 
@@ -50,70 +50,70 @@ Note that while these commands show the parameters in the original order, they a
 from pystoryboard.enums import Easing, ParameterType
 
 my_sprite.Fade(
-	easing=Easing.EasingIn,
-	start=1000,
-	end=2000,
-	start_opacity=1.0,
-	end_opacity=0.0,
+    easing=Easing.EasingIn,
+    start=1000,
+    end=2000,
+    start_opacity=1.0,
+    end_opacity=0.0,
 )
 
 my_sprite.Move(
-	easing=Easing.QuadOut,
-	start=1000,
-	end=2000,
-	start_x=0,
-	start_y=0,
+    easing=Easing.QuadOut,
+    start=1000,
+    end=2000,
+    start_x=0,
+    start_y=0,
     end_x=640,
     end_y=480,
 )
 
 my_sprite.MoveX(
-	easing=Easing.CubicInOut,
-	start=1000,
-	end=2000,
-	start_x=0,
+    easing=Easing.CubicInOut,
+    start=1000,
+    end=2000,
+    start_x=0,
     end_x=640,
 )
 
 my_sprite.MoveY(
-	easing=Easing.QuartIn,
-	start=1000,
-	end=2000,
-	start_y=0,
+    easing=Easing.QuartIn,
+    start=1000,
+    end=2000,
+    start_y=0,
     end_y=480,
 )
 
 my_sprite.Scale(
-	easing=Easing.QuintOut,
-	start=1000,
-	end=2000,
-	start_scale=0.5,
+    easing=Easing.QuintOut,
+    start=1000,
+    end=2000,
+    start_scale=0.5,
     end_scale=1.5,
 )
 
 my_sprite.VectorScale(
-	easing=Easing.SineInOut,
-	start=1000,
-	end=2000,
-	start_scale_x=2.0,
+    easing=Easing.SineInOut,
+    start=1000,
+    end=2000,
+    start_scale_x=2.0,
     start_scale_y=1.0,
     end_scale_x=0.5,
     end_scale_y=1.0,
 )
 
 my_sprite.Rotate(
-	easing=Easing.ExpoIn,
-	start=1000,
-	end=2000,
-	start_rotate=0.0,
+    easing=Easing.ExpoIn,
+    start=1000,
+    end=2000,
+    start_rotate=0.0,
     end_rotate=3.14,
 )
 
 my_sprite.Colour(
-	easing=Easing.CircOut,
-	start=1000,
-	end=2000,
-	start_red=255,
+    easing=Easing.CircOut,
+    start=1000,
+    end=2000,
+    start_red=255,
     start_green=255,
     start_blue=255,
     end_red=0,
@@ -122,10 +122,10 @@ my_sprite.Colour(
 )
 
 my_sprite.Parameter(
-	easing=Easing.ElasticHalfOut,
-	start=1000,
-	end=2000,
-	parameter=ParameterType.FlipHorizontal,
+    easing=Easing.ElasticHalfOut,
+    start=1000,
+    end=2000,
+    parameter=ParameterType.FlipHorizontal,
 )
 ```
 
@@ -197,7 +197,7 @@ my_sprite.Scale(0.5).Colour(128, 128, 128)
 # This fulfils the rules on specifying start and end times, since the start time is defined
 # by the `Loop` start and `MoveX` start, and the end is defined from the `MoveX` end.
 my_sprite_loop = my_sprite.Loop(1000, 10)
-	my_sprite_loop.MoveX(0, 640, 0, 500)
+    my_sprite_loop.MoveX(0, 640, 0, 500)
 ```
 
 When compiled, this will populate the start time and end time for the `Scale` and `Colour` command automatically, so you don't have to worry about manually calculating it.
