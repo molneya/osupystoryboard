@@ -164,8 +164,20 @@ In this case, it will default to `x=0`, `y=0`.
 ```py
 from pystoryboard.enums import Layer, Origin, LoopType
 
-my_sprite = sb.Sprite(Layer.Background, Origin.TopLeft, "sprite.png")
-my_animation = sb.Animation(Layer.Background, Origin.Centre, "animation.png", 10, 33, LoopType.Forever)
+my_sprite = sb.Sprite(
+    Layer.Background,
+    Origin.TopLeft,
+    "sprite.png",
+)
+
+my_animation = sb.Animation(
+    Layer.Background,
+    Origin.Centre,
+    "animation.png",
+    10,
+    33,
+    LoopType.Forever,
+)
 ```
 
 ### Command shortcuts
