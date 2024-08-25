@@ -14,7 +14,7 @@ class Drop:
     file_path: str
     fall_time: int
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         depth = random.uniform(0, 0.8)
         self.position = random.randint(-40, 680)
 
@@ -23,7 +23,7 @@ class Drop:
         self.scale = 1 - 0.2 * depth
         self.fall_time = int(self.fall_time + depth * 300)
 
-    def generate(self, start: int, end: int):
+    def generate(self, start: int, end: int) -> None:
         '''
         Generates a rain drop.
         '''
@@ -48,7 +48,7 @@ class Rain:
     drop_count: int = 75
     fall_time: int = 500
 
-    def generate(self, start: int, end: int):
+    def generate(self, start: int, end: int) -> None:
         '''
         Generates rain.
         '''
